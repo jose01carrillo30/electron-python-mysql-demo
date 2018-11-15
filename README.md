@@ -1,4 +1,4 @@
-# Demo 1
+# Demo
 
 Modified from: https://github.com/SouravJohar/python-app-with-electron-gui
 Video: https://youtu.be/627VBkAhKTc
@@ -16,6 +16,3 @@ Video: https://youtu.be/627VBkAhKTc
     * You can now run `npm start` inside the `gui/` directory.
     .
     * You will have to get your mySQL server up and running. Change the username and password in the `showdatabases.py` to whatever is running on your localhost.
-    * When you hit the "GO!" button, it will show you one of the database names. IDK what will happen if you do not have any databases on your mySQL server and hit the button. It should look something like this:
-
-<img src="/gui/samples/whenyouhitgo.png"/>

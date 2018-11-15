@@ -14,7 +14,6 @@ else:
   else:
     db.cursor.execute("SHOW TABLES")
     myresult = db.cursor.fetchall()
-    #myresult = ["echoing", sys.argv[1]]
     print("tables")
 
 for x in myresult:
