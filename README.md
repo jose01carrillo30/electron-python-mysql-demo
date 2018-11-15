@@ -6,13 +6,25 @@ Video: https://youtu.be/627VBkAhKTc
 ## Dependenices
 
 * Python
-* NodeJS
 * electron.js
-* python-shell
+* NodeJS
+* MySQL Server
+* Node dependencies
+  * python-shell
+  * sweetalert
 
-## Usage
+## Getting Started:
 
-    * Make sure you have `electron.js` - download it by typing `npm install electron -g`. This is will install Electron.js and set up your PATH.
-    * You can now run `npm start` inside the `gui/` directory.
-    .
-    * You will have to get your mySQL server up and running. Change the username and password in the `showdatabases.py` to whatever is running on your localhost.
+    * Make sure you have `electron.js` - download it by typing `npm install electron -g`. This is will install Electron.js and set up your PATH. You should only have to do this once on your machine.
+    * Install the node dependencies
+    * You will have to get your mySQL server up and running. Change the information in the `engine/connect_to_database.py` to match your MySQL server.
+
+
+## Running the Program:
+
+* Run start.bat (Windows) or start.command (Mac)
+* Alternatively you can manually run via `npm start main.js` inside the `gui/` directory.
+
+## Known Issues:
+
+* start file cannot cd out of gui folder
