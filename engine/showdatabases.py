@@ -1,13 +1,21 @@
 import sys
 import mysql.connector
-mydb = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    passwd="rootpassword"
-)
-mycursor = mydb.cursor()
-mycursor.execute("SHOW DATABASES")
-myresult = mycursor.fetchall()
+import connect_to_database as db
+if sys.argv[1] == "" or len(sys.argv) <= 1:
+  db.cursor.execute("SHOW DATABASES")
+  myresult = db.cursor.fetchall()
+  print("databases")
+else:
+  try:
+    db.cursor.execute("USE "+ sys.argv[1])
+  except:
+    myresult = ["No database found with name of '%s'"%sys.argv[1]]
+    print("error")
+  else:
+    db.cursor.execute("SHOW TABLES")
+    myresult = db.cursor.fetchall()
+    #myresult = ["echoing", sys.argv[1]]
+    print("tables")
 
 for x in myresult:
   print(x)
